@@ -12,6 +12,7 @@ public class PersistenceConfiguration {
     public DataSource dataSource() {
         DataSourceBuilder builder = DataSourceBuilder.create();
         builder.url("jdbc:mysql://localhost:3306/conference_demo");
+        builder.username("david");
         System.out.print("\nCustom datasource has been initialized\n\n");
         return builder.build();
     }
