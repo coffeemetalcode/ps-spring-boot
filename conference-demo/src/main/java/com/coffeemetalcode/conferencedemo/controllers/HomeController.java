@@ -13,11 +13,15 @@ public class HomeController {
     @Value("${app.version}")
     private String appVersion;
 
+//    private final String[] bananas = {"banana 1", "banana 2"};
+
     @GetMapping
     @RequestMapping("/")
     public Map getStatus() {
         Map<String, String> map = new HashMap<>();
         map.put("app-version", appVersion);
+//        map.put("bananas", bananas);
+
         return map;
     }
 }
